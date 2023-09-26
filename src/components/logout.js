@@ -1,22 +1,22 @@
 import React from "react";
 import { Button, Container, Typography } from "@material-ui/core";
-import {Formik, Form} from 'formik';
+import { Formik, Form } from 'formik';
 import useAuthentication from "../hooks/authentication";
 
-const Logout= ()=> {
-  const {isLoggedIn, logout}= useAuthentication;
-  const handleSubmit=()=> {
+const Logout = () => {
+  const { logout } = useAuthentication;
+  const handleSubmit = () => {
     logout();
   }
-  const initialValues={};
+  const initialValues = {};
 
-  return(
+  return (
     <Container>
       <Formik initialValues={initialValues} onSubmit={handleSubmit}>
         <Form>
           <Button type="submit" variant="contained" color="primary">
             <Typography>Log Out</Typography>
-          </Button> 
+          </Button>
         </Form>
       </Formik>
     </Container>
