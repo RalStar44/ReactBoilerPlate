@@ -1,58 +1,85 @@
-// menu_config.js
+/**
+ * @file menu_config.js
+ * @description Configuration file for defining menu items in the application.
+ */
+
 import { Components } from "../importComponents";
 import ContextTypes from "../context_types";
-// ToDo:  add import for Icons.  Note: Similar to the way Components was done
+import AlignLeftIcon from '../../assests/icons/align-left';
 
+/**
+ * @description Pseudo object for representing a menu item configuration.
+ * @typedef {Object} MenuItem - Represents a menu item configuration.
+ * @property {string} label - The label for the menu item.
+ * @property {string} icon - The icon for the menu item.
+ * @property {string} dataType - The data type associated with the menu item.
+ * @property {string} route - The route for the menu item.
+ * @property {JSX.Element} component - The React component to render when this menu item is selected.
+ * @property {boolean} isSecure - Indicates if the menu item requires authentication.
+ */
+
+/**
+ * @description Configuration array for defining menu items in the application.
+ * @type {MenuItem[]}
+ */
 const menuConfig = [
   {
     label: "Dashboard",
-    icon: "icon1",
+    icon: AlignLeftIcon,
     dataType: ContextTypes.Dashboard,
     route: '/',
     component: <Components.Dashboard />,
+    isSecure: false,
   },
   {
     label: "Hardware",
-    icon: "icon2",
+    icon: AlignLeftIcon,
     dataType: ContextTypes.Hardware,
     route: '/hadrware',
     component: <Components.Hardware />,
+    isSecure: false,
   },
   {
     label: "Software",
-    icon: "icon3",
+    icon: AlignLeftIcon,
     dataType: ContextTypes.Software,
     route: '/software',
     component: <Components.Software />,
+    isSecure: false,
   },
   {
     label: "Network",
-    icon: "icon4",
+    icon: AlignLeftIcon,
     dataType: ContextTypes.Network,
     route: '/network',
     component: <Components.Network />,
+    isSecure: false,
   },
   {
     label: "User",
-    icon: "icon5",
+    icon: AlignLeftIcon,
     dataType: ContextTypes.User,
     route: '/user',
     component: <User />,
+    isSecure: false,
   },
   {
     label: "Log In",
-    icon: "icon6",
+    icon: AlignLeftIcon,
     dataType: null,
     route: '/login',
     component: <Components.Authentication />,
+    isSecure: false,
   },
   {
     label: "About",
-    icon: "icon7",
+    icon: AlignLeftIcon,
     dataType: null,
     route: '/about',
-    component: <Components.About /> ,
+    component: <Components.About />,
+    isSecure: false,
   },
+
 
   // Add more menu items as needed
 ];
