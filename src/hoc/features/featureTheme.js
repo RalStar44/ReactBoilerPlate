@@ -1,7 +1,7 @@
 // featureTheme.js
 import React, { createContext, useContext } from 'react';
 import { ThemeProvider } from '@mui/material/styles';
-import theme from '../../stylings/themes/master';
+import {master as theme} from '../../stylings/themes/master';
 
 /**
  * Context for providing the theme to wrapped components.
