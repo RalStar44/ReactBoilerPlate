@@ -1,28 +1,33 @@
+/**
+ * @description Pseudo object for representing a menu item configuration.
+ * @typedef {Object} MenuItem - Represents a menu item configuration.
+ * @property {string} label - The label for the menu item.
+ * @property {string} icon - The icon for the menu item.
+ * @property {string} dataType - The data type associated with the menu item.
+ * @property {string} route - The route for the menu item.
+ * @property {JSX.Element} component - The React component to render when this menu item is selected.
+ * @property {boolean} isSecure - Indicates if the menu item requires authentication.
+ */
+
+/**
+ * @file app.js
+ */
+
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { menuConfig } from './constants/configs/menu_config';
-import withTitle from './hoc/withTitle';
-import withLogging from './hoc/withLogging';
+import Routing from './hoc/routing';
 
-const App = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-  return (
-    <Router>
-      <Routes>
-        {Object.values(menuConfig).map((route) => (
-          <Route
-            key={route.path}
-            exact
-            path={route.path}
-            component={route.secure ? SecuredRoute : NonSecuredRoute}
-          />
-        ))}
+/**
+ * @description Root component of the application.
+ *
+ * @param {object} configuration - Holds configuration details for the application.
+ * @param {MenuItem[]} configuration.Menu - The configuration for the application's menu.
+ *
+ * @returns {JSX.Element} The root component of the application.
+ */
+const App = (props) => {
+  const menu =  props.configuration.Menu;
 
-        {/* Add a catch-all route for unknown routes */}
-        <Route path="*" component={NotFound} />
-      </Routes>
-    </Router>
-  );
+  return <Routing menu={menu} />;
 };
 
 export default App;

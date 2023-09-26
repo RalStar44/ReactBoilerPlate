@@ -1,4 +1,7 @@
-// config.js
+/**
+ * @file config.js
+ * 
+*/
 
 import {appConfig as App} from "./constants/configs/app_config";
 import {brandingConfig as Branding} from "./constants/configs/branding_config";
@@ -9,7 +12,7 @@ import {supportConfig as Support} from "./constants/configs/support_config";
 
 //Define or include other environemntal variables here
 
-/**\
+/**
  * Configutations Object 
  * 
  * @typedef {Object} configs = a collection of all configurations
