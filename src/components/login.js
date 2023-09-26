@@ -4,11 +4,10 @@ import { Formik, Form, Field } from 'formik';
 import useAuthentication from '../hooks/authentication';
 
 const Login = () => {
-  const {isLoggedIn, login, logout} = useAuthentication();    
-  const handleSubmit = (values) => {
-     
-    console.log(values);
-    };
+  const { login } = useAuthentication();
+  const handleSubmit = () => {
+    login();
+  };
 
   return (
     <Container>
