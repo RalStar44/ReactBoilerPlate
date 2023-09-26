@@ -1,6 +1,6 @@
 /**
- * @file master.jss
- * @description default stylings for theme provider.  Add or modify the theme to suit your needs.
+ * @file master.js
+ * @description default stylings for theme provider using JSS.  Add or modify the theme to suit your needs.
  */
 
 const master = {
