@@ -1,4 +1,6 @@
-// operator_factory.js
+/**
+ *  @file operator_factory.js
+ */ 
 import { useState, useEffect } from 'react';
 import dataOperatorFunctions from './data_operator_functions';
 
