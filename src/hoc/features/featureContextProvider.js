@@ -1,8 +1,15 @@
-// features/featureContextProvider.js
-import React, { createContext } from 'react';
-import useDataOperators from './data_factory'; // Import the useDataOperators hook
+/**
+ * @file featureContextProvider.js
+ * @description Provides context data through a context provider.
+ */
 
-// Create a context for the data
+import React, { createContext } from 'react';
+import useDataOperators from '../../hooks/useDataOperators';
+
+/**
+ * Context for providing data to wrapped components.
+ * @type {React.Context}
+ */
 const DataContext = createContext();
 
 /**
