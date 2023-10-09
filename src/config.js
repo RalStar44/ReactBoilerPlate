@@ -9,10 +9,10 @@ import {companyConfig as Company} from "./constants/configs/company_config";
 import {menuConfig as Menu} from "./constants/configs/menu_config";
 import {socialMediaConfig as SocialMedia} from "./constants/configs/social_media_config";
 import {supportConfig as Support} from "./constants/configs/support_config";
-import codeBase from './constants/configs/code_base';
+import {codeBase as CodeBase} from './constants/configs/code_base';
 
 //Define or include other environemntal variables here
-const codeBaseLevel= codeBase.Development
+const codeBaseLevel= CodeBase.Development
 
 /**
  * Configutations Object 
@@ -33,6 +33,7 @@ const configs = {
     Menu,
     SocialMedia,
     Support,
+    codeBaseLevel,
   };
   
   export default configs;
