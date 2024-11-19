@@ -1,6 +1,5 @@
 /**
  * @file config.js
- * 
 */
 
 import {appConfig as App} from "./constants/configs/app_config";
@@ -12,12 +11,11 @@ import {supportConfig as Support} from "./constants/configs/support_config";
 import {codeBase as CodeBase} from './constants/configs/code_base';
 
 //Define or include other environemntal variables here
-const codeBaseLevel= CodeBase.Development
-
+const codeBaseLevel= CodeBase.Development;
 /**
  * Configutations Object 
  * 
- * @typedef {Object} configs = a collection of all configurations
+ * @type {Object} configs = a collection of all configurations
  * @property {Object} App - Details about the appolication
  * @property {Object} Branding - Information about the company logo
  * @property {Object} Company - Information about the company
