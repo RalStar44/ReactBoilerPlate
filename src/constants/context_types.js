@@ -1,9 +1,13 @@
 /**
+ * @file context_types.js
+ */
+
+/**
  * Context Types Object.
  *
  * This object defines various context types used in the application.
  *
- * @typedef {Object} contextTypes
+ * @type {Object} contextTypes
  * @property {string} Hardware - Represents the hardware context type.
  * @property {string} Software - Represents the software context type.
  * @property {string} Network - Represents the network context type.

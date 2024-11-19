@@ -7,8 +7,8 @@ import { Container } from "@mui/material";
 import useAuthentication from "../hooks/useAuthentication";
 
 /**
- * Authentication component that renders either a login or logout component based on user's authentication status.
- *
+ * @description Authentication component that renders either a login or logout component based on user's authentication status.
+ * @type {JSX.Element} Authenciation
  * @returns {JSX.Element} The rendered authentication component.
  */
 const Authentication = () => {
@@ -21,11 +21,4 @@ const Authentication = () => {
   );
 };
 
-/**
- * Memoized version of the Authentication component.
- *
- * @type {React.MemoExoticComponent}
- */
-const MemoizedAuth = React.memo(Authentication);
-
-export default MemoizedAuth;
+export default React.memo(Authentication);

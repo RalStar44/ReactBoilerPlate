@@ -1,4 +1,6 @@
-// branding_config.js
+/**
+ * @file branding_config.js
+ */
 
 let Logo = null; // Assign Logo to null initially
 
@@ -14,7 +16,7 @@ let Logo = null; // Assign Logo to null initially
 
 /** 
  * Branding Configuration Object.
- * @typedef {Object} BrandingConfig
+ * @type {Object} brandingConfig
  * @property {string} primaryColor - Primary color for branding (in hex or any valid CSS color format).
  * @property {string} secondaryColor - Alternate color for branding (in hex or any valid CSS color format).
  * @property {React.Component} logo - Image component used as the logo.

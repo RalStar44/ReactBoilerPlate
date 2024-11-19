@@ -1,12 +1,29 @@
-// menu_config.js
-import { Components } from "../importComponents";
-import ContextTypes from "../context_types";
-// ToDo:  add import for Icons.  Note: Similar to the way Components was done
+/**
+ * @file menu_config.js
+ */
 
+import Components from "../importComponents";
+import ContextTypes from "../context_types";
+import Icons from "../icons";
+
+/**
+ * Configuration for the application's menu items.
+ * @type {Object} MenuItem
+ * @property {string} label - The display name of the menu item.
+ * @property {object} icon - The icon associated with the menu item.
+ * @property {string|null} dataType - The data type associated with the menu item.
+ * @property {string} route - The URL route associated with the menu item.
+ * @property {JSX.Element} component - The React component to render when this menu item is selected.
+ */
+
+/**
+ * Array of menu items for the application.
+ * @type {MenuItem[]} menuConfig
+ */
 const menuConfig = [
   {
     label: "Dashboard",
-    icon: "icon1",
+    icon: Icons.AlignLeftIcon,
     dataType: ContextTypes.Dashboard,
     route: '/',
     component: <Components.Dashboard />,
@@ -37,7 +54,7 @@ const menuConfig = [
     icon: "icon5",
     dataType: ContextTypes.User,
     route: '/user',
-    component: <User />,
+    component: <Components.User/>,
   },
   {
     label: "Log In",
