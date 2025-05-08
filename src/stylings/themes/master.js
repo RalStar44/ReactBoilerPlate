@@ -13,11 +13,11 @@ const master = {
     heading: {
       fontSize: '24px',
       fontWeight: 'bold',
-      color: '#333333',
+      color: 'rgba(33,33,33,1)', // #333333 
     },
     button: {
       backgroundColor: '#007BFF',
-      color: '#FFFFFF',
+      color: 'rgba(255,255,255,1)', // #FFFFFF
       padding: '8px 16px',
       borderRadius: '4px',
       cursor: 'pointer',
